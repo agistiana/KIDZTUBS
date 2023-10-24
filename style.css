@@ -81,6 +81,16 @@ body {
   width: 250px;
 }
 
+.overlay .box-produk .pesan a img {
+  width: 30vmin;
+}
+
+.overlay .box-produk .pesan a {
+  text-align: center;
+  position: absolute;
+  margin: 2px auto;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -107,7 +117,12 @@ body {
   display: flex;
 }
 
-.overlay .content-produk {
+.overlay .close {
+  position: absolute;
+  color: #ebebeb;
+}
+
+.overlay .box-produk {
   height: 70vh;
   width: 90vw;
   background-color: aliceblue;
@@ -116,10 +131,11 @@ body {
   position: relative;
   justify-content: center;
   display: flex;
+  overflow: scroll;
+  flex-wrap: wrap;
 }
 
-.overlay .content-produk a {
-  /* background-color: black; */
+.overlay a {
   text-decoration: none;
   text-shadow: 2px 2px 3px black;
   color: white;
@@ -128,16 +144,72 @@ body {
   opacity: 1;
   position: absolute;
   float: right;
-  margin-top: -20px;
+  margin-top: -30px;
 }
 
-.overlay .content-produk .gambar-video {
-  position: absolute;
+.overlay .box-produk .gambar-video {
+  position: relative;
   margin: 20px 10px;
   box-sizing: border-box;
   width: 95%;
-  height: 50%;
-  background-color: rgb(78, 78, 78);
+  height: 50vmin;
+  background-color: #ebebeb;
+  display: flex;
+  overflow: auto;
+  padding: 10px;
+}
+
+.overlay .box-produk .gambar-video::-webkit-scrollbar {
+  height: 0.8rem;
+  border-radius: 10px;
+  background: black;
+}
+
+.overlay .box-produk .gambar-video::-webkit-scrollbar-track-piece {
+  background-color: black;
+}
+
+.overlay .box-produk .gambar-video video {
+  width: 45vmin;
+  height: 45vmin;
+  object-fit: scale-down;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.overlay .box-produk .gambar-video img {
+  width: 45vmin;
+  height: 45vmin;
+  object-fit: scale-down;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.overlay .box-produk .des-peroduk {
+  display: block;
+  text-align: left;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 95%;
+  text-wrap: wrap;
+}
+
+.overlay .box-produk .des-peroduk h4 {
+  font-size: 4vmin;
+}
+
+.overlay .box-produk .des-peroduk .p1,
+.overlay .des-peroduk .box-produk .p2 {
+  font-size: 3vmin;
+  top: 10px;
+}
+
+.overlay .box-produk .des-peroduk .pengiriman img {
+  margin: auto;
+  width: 20vmin;
+  height: 7vmin;
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgb(87, 87, 87);
 }
 
 @keyframes zoomAndFade {
